@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">LuckyTicket_Kotlin</string>
+    <string name="redticket">redTicket</string>
+    <string name="bulbicon">bulbIcon</string>
+    <string name="number_of_ticket">Number of ticket</string>
+    <string name="check_the_luck_of_the_ticket">Check the luck of the ticket</string>
+    <string name="your_ticket_number">Your ticket number</string>
+    <string name="incorrect_input">Incorrect input</string>
+    <string name="lucky_ticket">Your ticket is lucky!</string>
+    <string name="unlucky_ticket">Your ticket is unlucky!</string>
+</resources>

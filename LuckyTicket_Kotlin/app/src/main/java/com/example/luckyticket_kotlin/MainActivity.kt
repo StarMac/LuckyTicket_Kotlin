@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(p0: View?) {
         val editText = findViewById<EditText>(R.id.etTicketNumber)
-        val bulb = findViewById<ImageView>(R.id.lightbulb)
+        val bulb = findViewById<ImageView>(R.id.lightbulbImage)
         val greenBulb = getDrawable(R.drawable.ic_green_bulb)!!
         val redBulb = getDrawable(R.drawable.ic_red_bulb)!!
         val number = editText.text.toString()

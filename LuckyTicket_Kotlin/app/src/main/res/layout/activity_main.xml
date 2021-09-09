@@ -20,7 +20,7 @@
         android:src="@drawable/ic_ticket" />
 
     <ImageView
-        android:id="@+id/lightbulb"
+        android:id="@+id/lightbulbImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -45,7 +45,7 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lightbulb" />
+        app:layout_constraintTop_toBottomOf="@+id/lightbulbImage" />
 
     <Button
         android:id="@+id/btnCheckNumber"

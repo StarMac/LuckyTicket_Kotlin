@@ -9,36 +9,35 @@ import android.widget.ImageView
 import android.widget.Toast
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
-    lateinit var button: Button
+
+    private val MAX_NUMBER_OF_DIGITS = 6
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        button = findViewById(R.id.button)
+        val button : Button = findViewById(R.id.btnCheckNumber)
         button.setOnClickListener(this)
     }
 
     override fun onClick(p0: View?) {
-        val editText = findViewById<EditText>(R.id.editTextTextPersonName)
+        val editText = findViewById<EditText>(R.id.etTicketNumber)
         val bulb = findViewById<ImageView>(R.id.lightbulb)
-        val greenBulb = getDrawable(resources.getIdentifier("@drawable/ic_green_bulb", null, packageName))
-        val redBulb = getDrawable(resources.getIdentifier("@drawable/ic_red_bulb", null, packageName))
+        val greenBulb = getDrawable(R.drawable.ic_green_bulb)!!
+        val redBulb = getDrawable(R.drawable.ic_red_bulb)!!
         val number = editText.text.toString()
 
-        if (number.length == 6) {
-            if (number[0].code + number[1].code + number[2].code
-                == number[3].code + number[4].code + number[5].code) {
+        if (number.length == MAX_NUMBER_OF_DIGITS) {
+            if (number[0].digitToInt() + number[1].digitToInt() + number[2].digitToInt()
+                == number[3].digitToInt() + number[4].digitToInt() + number[5].digitToInt()) {
                 bulb.setImageDrawable(greenBulb)
-                val toast = Toast.makeText(applicationContext, R.string.lucky_ticket, Toast.LENGTH_SHORT)
-                toast.show()
+                Toast.makeText(applicationContext, R.string.lucky_ticket, Toast.LENGTH_SHORT).show()
             } else {
                 bulb.setImageDrawable(redBulb)
-                val toast = Toast.makeText(applicationContext, R.string.unlucky_ticket, Toast.LENGTH_SHORT)
-                toast.show()
+                Toast.makeText(applicationContext, R.string.unlucky_ticket, Toast.LENGTH_SHORT).show()
             }
         } else {
-            val toast = Toast.makeText(applicationContext, R.string.incorrect_input, Toast.LENGTH_SHORT)
-            toast.show()
+            Toast.makeText(applicationContext, R.string.incorrect_input, Toast.LENGTH_SHORT).show()
         }
     }
 }

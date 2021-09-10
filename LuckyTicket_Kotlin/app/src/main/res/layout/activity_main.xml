@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/redTicketImage"
+        android:id="@+id/imgRedTicket"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -20,14 +20,14 @@
         android:src="@drawable/ic_ticket" />
 
     <ImageView
-        android:id="@+id/lightbulbImage"
+        android:id="@+id/imgLightBulb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:contentDescription="@string/bulbicon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/redTicketImage"
+        app:layout_constraintTop_toBottomOf="@+id/imgRedTicket"
         app:srcCompat="@drawable/ic_grey_bulb" />
 
     <EditText
@@ -45,7 +45,7 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lightbulbImage" />
+        app:layout_constraintTop_toBottomOf="@+id/imgLightBulb" />
 
     <Button
         android:id="@+id/btnCheckNumber"
